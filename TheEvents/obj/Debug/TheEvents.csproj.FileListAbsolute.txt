@@ -94,3 +94,8 @@ C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\bin\Microsoft.AI.Web.xml
 C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.csprojResolveAssemblyReference.cache
 C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.dll
 C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.pdb
+C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.Migrations.first.resources
+C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.csproj.GenerateResource.Cache
+C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.Migrations.Anotherone.resources
+C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.Migrations.Anotheroneagain.resources
+C:\Users\Lou75\tiy\week-8\TheEvents\TheEvents\obj\Debug\TheEvents.Migrations.AddedIEnumerable.resources

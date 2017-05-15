@@ -4,39 +4,35 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TheEvents.Models;
+using System.Data.Entity;
+using TheEvents.CacheServices;
 
 namespace TheEvents.Controllers
 {
     public class HomeController : Controller
     {
+        private String eventCacheKey = CacheKeys.Events();
+
         public ActionResult Index()
         {
-            /*
-            var timeToDisplay = HttpRuntime.Cache["timeStamp"];
-
-            if (timeToDisplay == null)
+            var schedule = HttpRuntime.Cache["events"] as IEnumerable<Events>;
+            if (schedule == null)
             {
-                HttpRuntime.Cache.Add("timeStamp",
-                    DateTime.Now,
+                var eventsStatus = new ApplicationDbContext().Events.Include(i => i.Genres).Include(i => i.Venue).ToList();
+                HttpRuntime.Cache.Add(
+                    "eventsStatus",
+                    eventsStatus,
                     null,
-                    DateTime.Now.AddDays(7),
-                    new TimeSpan(8, 0, 0),
-                    System.Web.Caching.CacheItemPriority.Normal,
+                    DateTime.Now.AddDays(27),
+                    new TimeSpan(),
+                    System.Web.Caching.CacheItemPriority.High,
                     null
                     );
-                 timeToDisplay = HttpRuntime.Cache["timeStamp"];
-            }
-            else
-            {
 
+                schedule = HttpRuntime.Cache["events"] as IEnumerable<Events>;
             }
 
-            ViewBag.FromCache = timeToDisplay;
-            */
-
-            var events = new ApplicationDbContext().Events.OrderBy(o => o.StartTime).ToList();
-
-            return View(events);
+            return View(schedule);
         }
 
         public ActionResult About()

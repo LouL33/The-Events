@@ -13,7 +13,7 @@ namespace TheEvents.Models
         public string City { get; set; }
         public int Capacity { get; set; }
 
-        public ICollection<Events> Events { get; set; }
+        public ICollection<Events> Events { get; set; } = new HashSet<Events>();
 
     }
 }

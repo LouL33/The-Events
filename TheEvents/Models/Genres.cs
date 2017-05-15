@@ -10,6 +10,6 @@ namespace TheEvents.Models
         public int Id { get; set; }
         public string Title { get; set; }
 
-        public ICollection<Events> Events { get; set; }
+        public ICollection<Events> Events { get; set; } = new HashSet<Events>();
     }
 }

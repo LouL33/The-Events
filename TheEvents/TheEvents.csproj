@@ -188,11 +188,29 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CacheServices\CacheKeys.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031911309_first.cs" />
+    <Compile Include="Migrations\201705031911309_first.Designer.cs">
+      <DependentUpon>201705031911309_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705032208320_Another one.cs" />
+    <Compile Include="Migrations\201705032208320_Another one.Designer.cs">
+      <DependentUpon>201705032208320_Another one.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705032342574_Another one again.cs" />
+    <Compile Include="Migrations\201705032342574_Another one again.Designer.cs">
+      <DependentUpon>201705032342574_Another one again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040018038_Added IEnumerable.cs" />
+    <Compile Include="Migrations\201705040018038_Added IEnumerable.Designer.cs">
+      <DependentUpon>201705040018038_Added IEnumerable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -261,6 +279,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -279,6 +302,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705031911309_first.resx">
+      <DependentUpon>201705031911309_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032208320_Another one.resx">
+      <DependentUpon>201705032208320_Another one.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032342574_Another one again.resx">
+      <DependentUpon>201705032342574_Another one again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040018038_Added IEnumerable.resx">
+      <DependentUpon>201705040018038_Added IEnumerable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
