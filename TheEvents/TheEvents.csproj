@@ -196,21 +196,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705031911309_first.cs" />
-    <Compile Include="Migrations\201705031911309_first.Designer.cs">
-      <DependentUpon>201705031911309_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705032208320_Another one.cs" />
-    <Compile Include="Migrations\201705032208320_Another one.Designer.cs">
-      <DependentUpon>201705032208320_Another one.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705032342574_Another one again.cs" />
-    <Compile Include="Migrations\201705032342574_Another one again.Designer.cs">
-      <DependentUpon>201705032342574_Another one again.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705040018038_Added IEnumerable.cs" />
-    <Compile Include="Migrations\201705040018038_Added IEnumerable.Designer.cs">
-      <DependentUpon>201705040018038_Added IEnumerable.cs</DependentUpon>
+    <Compile Include="Migrations\201705151345242_restetagian.cs" />
+    <Compile Include="Migrations\201705151345242_restetagian.Designer.cs">
+      <DependentUpon>201705151345242_restetagian.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -304,17 +292,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705031911309_first.resx">
-      <DependentUpon>201705031911309_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705032208320_Another one.resx">
-      <DependentUpon>201705032208320_Another one.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705032342574_Another one again.resx">
-      <DependentUpon>201705032342574_Another one again.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705040018038_Added IEnumerable.resx">
-      <DependentUpon>201705040018038_Added IEnumerable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705151345242_restetagian.resx">
+      <DependentUpon>201705151345242_restetagian.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

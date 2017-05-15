@@ -20,7 +20,7 @@ namespace TheEvents.Controllers
             {
                 var eventsStatus = new ApplicationDbContext().Events.Include(i => i.Genres).Include(i => i.Venue).ToList();
                 HttpRuntime.Cache.Add(
-                    "eventsStatus",
+                    "events",
                     eventsStatus,
                     null,
                     DateTime.Now.AddDays(27),

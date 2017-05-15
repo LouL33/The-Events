@@ -3,7 +3,7 @@ namespace TheEvents.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first : DbMigration
+    public partial class restetagian : DbMigration
     {
         public override void Up()
         {
@@ -14,15 +14,15 @@ namespace TheEvents.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                         Description = c.String(),
-                        StartTime = c.DateTime(),
+                        StartTime = c.DateTime(nullable: false),
                         EndTime = c.DateTime(),
-                        VenueId = c.Int(nullable: false),
+                        VenuesId = c.Int(nullable: false),
                         GenreId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Genres", t => t.GenreId, cascadeDelete: true)
-                .ForeignKey("dbo.Venues", t => t.VenueId, cascadeDelete: true)
-                .Index(t => t.VenueId)
+                .ForeignKey("dbo.Venues", t => t.VenuesId, cascadeDelete: true)
+                .Index(t => t.VenuesId)
                 .Index(t => t.GenreId);
             
             CreateTable(
@@ -121,7 +121,7 @@ namespace TheEvents.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Events", "VenueId", "dbo.Venues");
+            DropForeignKey("dbo.Events", "VenuesId", "dbo.Venues");
             DropForeignKey("dbo.Events", "GenreId", "dbo.Genres");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
@@ -130,7 +130,7 @@ namespace TheEvents.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.Events", new[] { "GenreId" });
-            DropIndex("dbo.Events", new[] { "VenueId" });
+            DropIndex("dbo.Events", new[] { "VenuesId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
